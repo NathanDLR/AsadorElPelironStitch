@@ -1,0 +1,57 @@
+---
+interface Props {
+  title: string;
+  id?: string;
+}
+
+const { title, id } = Astro.props;
+---
+
+<section id={id} class="section-spacer">
+    <div class="container menu-section">
+        <div class="section-sidebar">
+            <span class="terracotta-thread"></span>
+            <h2 class="headline-lg">{title}</h2>
+        </div>
+        <div class="section-content">
+            <slot />
+        </div>
+    </div>
+</section>
+
+<style>
+    .menu-section {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 2rem;
+    }
+
+    .section-sidebar {
+        grid-column: 1 / 4;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .headline-lg {
+        font-size: 2.5rem;
+        line-height: 1.1;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    .section-content {
+        grid-column: 5 / 13;
+    }
+
+    @media (max-width: 768px) {
+        .section-sidebar {
+            grid-column: 1 / 13;
+            margin-bottom: 2rem;
+        }
+
+        .section-content {
+            grid-column: 1 / 13;
+        }
+    }
+</style>
