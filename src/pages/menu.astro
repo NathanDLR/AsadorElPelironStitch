@@ -77,14 +77,15 @@ import MenuItem from '../components/MenuItem.astro';
     }
 
     .display-lg {
-        font-size: 6rem;
+        font: var(--display-lg);
         margin-bottom: 2rem;
+        text-transform: uppercase;
     }
 
     .intro-text {
+        font: var(--body-lg);
         max-width: 500px;
         opacity: 0.8;
-        font-size: 1.25rem;
     }
 
     .menu-footer {
@@ -95,6 +96,7 @@ import MenuItem from '../components/MenuItem.astro';
     }
 
     .footer-note {
+        font: var(--body-md);
         max-width: 600px;
         opacity: 0.6;
         font-style: italic;

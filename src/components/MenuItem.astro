@@ -30,27 +30,21 @@ const { name, description, price } = Astro.props;
     }
 
     .item-name {
-        font-size: 1.5rem;
-        font-family: var(--font-serif);
-        font-weight: 700;
+        font: var(--title-md);
         color: var(--on-surface);
         text-transform: uppercase;
         letter-spacing: 0.05em;
     }
 
     .item-price {
-        font-family: var(--font-serif);
-        font-weight: 700;
-        font-size: 1.25rem;
+        font: var(--title-sm);
         color: var(--primary);
     }
 
     .item-description {
-        font-family: var(--font-sans);
-        font-size: 0.95rem;
-        line-height: 1.6;
+        font: var(--body-sm);
         color: var(--on-surface);
-        opacity: 0.7;
+        opacity: 0.6;
         padding-left: 4rem; /* Asymmetric staircase flow */
     }
 

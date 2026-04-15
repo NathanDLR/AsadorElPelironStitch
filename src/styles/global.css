@@ -7,20 +7,39 @@
   --primary-container: #bb563b;
   --on-primary: #ffffff;
   --on-surface: #1c1c19;
-  --surface-container: #f0ede8;
+  
+  --surface: #fcf9f4;
+  --surface-bright: #fcf9f4;
+  --surface-container-lowest: #ffffff;
   --surface-container-low: #f6f3ee;
+  --surface-container: #f0ede8;
+  --surface-container-high: #ebe8e3;
   --surface-container-highest: #e5e2dd;
+  
+  --tertiary: #72554b;
+  --tertiary-container: #8d6e63;
+  --on-tertiary: #ffffff;
+  
+  --outline: #89726c;
   --outline-variant: #ddc0b9;
   
   /* Typography Scale */
   --font-serif: 'Noto Serif', serif;
   --font-sans: 'Manrope', sans-serif;
   
-  --display-lg: italic 700 4.5rem/1.1 var(--font-serif);
-  --headline-lg: 700 3rem/1.2 var(--font-serif);
-  --title-md: 700 1.25rem/1.4 var(--font-serif);
-  --body-md: 400 1rem/1.6 var(--font-sans);
-  --label-md: 700 0.75rem/1 var(--font-sans);
+  /* Scaled typography tokens */
+  --display-lg: normal 700 5rem/1.1 var(--font-serif);
+  --display-md: italic 700 3.5rem/1.1 var(--font-serif);
+  --headline-lg: normal 700 2.5rem/1.2 var(--font-serif);
+  --headline-md: normal 700 1.75rem/1.2 var(--font-serif);
+  --title-lg: normal 700 1.5rem/1.4 var(--font-serif);
+  --title-md: normal 700 1.25rem/1.4 var(--font-serif);
+  --title-sm: normal 700 1.1rem/1.4 var(--font-serif);
+  --body-lg: normal 400 1.125rem/1.6 var(--font-sans);
+  --body-md: normal 400 1rem/1.6 var(--font-sans);
+  --body-sm: normal 400 0.875rem/1.6 var(--font-sans);
+  --label-md: normal 700 0.75rem/1 var(--font-sans);
+  --label-sm: normal 700 0.65rem/1 var(--font-sans);
 }
 
 * {

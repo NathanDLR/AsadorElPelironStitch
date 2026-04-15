@@ -1,120 +1,119 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 
 interface Props {
-  title: string;
-  description?: string;
+    title: string;
+    description?: string;
 }
 
-const { title, description = 'Asador El Pelirón - Editorial Asador. El arte del fuego.' } = Astro.props;
+const {
+    title,
+    description = "Asador El Pelirón - Editorial Asador. El arte del fuego.",
+} = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title} | Asador El Pelirón</title>
-    <meta name="description" content={description} />
-</head>
-<body>
-    <header class="container">
-        <nav class="editorial-nav">
-            <div class="nav-left">
-                <a href="/" class="logo">EDITORIAL ASADOR</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title} | Asador El Pelirón</title>
+        <meta name="description" content={description} />
+    </head>
+    <body>
+        <header class="container">
+            <nav class="editorial-nav">
+                <div class="nav-left">
+                    <a href="/" class="logo">ASADOR EL PELIRÓN</a>
+                </div>
+                <div class="nav-right">
+                    <a href="/menu">MENU</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <slot />
+        </main>
+
+        <footer class="section-spacer">
+            <div class="container footer-content">
+                <div class="footer-brand">
+                    <span class="terracotta-thread"></span>
+                    <p class="label-md">ASADOR EL PELIRÓN</p>
+                </div>
+                <p class="copyright">
+                    © {new Date().getFullYear()} ASADOR EL PELIRÓN. TODOS LOS DERECHOS
+                    RESERVADOS.
+                </p>
             </div>
-            <div class="nav-right">
-                <a href="/menu">MENU</a>
-                <a href="/historia">HISTORIA</a>
-                <a href="/contacto">CONTACTO</a>
-            </div>
-        </nav>
-    </header>
+        </footer>
 
-    <main>
-        <slot />
-    </main>
+        <style>
+            .editorial-nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 2.5rem 0;
+                border-bottom: 1px solid rgba(137, 114, 108, 0.2);
+            }
 
-    <footer class="section-spacer">
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <span class="terracotta-thread"></span>
-                <p class="label-md">EDITORIAL ASADOR. EL ARTE DEL FUEGO.</p>
-            </div>
-            <div class="footer-links">
-                <a href="#">INSTAGRAM</a>
-                <a href="#">AVISO LEGAL</a>
-                <a href="#">PRIVACIDAD</a>
-            </div>
-            <p class="copyright">© 2024 ASADOR EL PELIRÓN. TODOS LOS DERECHOS RESERVADOS.</p>
-        </div>
-    </footer>
+            .logo {
+                font-family: var(--font-serif);
+                font-weight: 700;
+                font-size: 1.25rem;
+                text-decoration: none;
+                color: var(--on-surface);
+                letter-spacing: 0.05em;
+            }
 
-    <style>
-        .editorial-nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2.5rem 0;
-            border-bottom: 1px solid rgba(137, 114, 108, 0.2);
-        }
+            .nav-right {
+                display: flex;
+                gap: 3rem;
+            }
 
-        .logo {
-            font-family: var(--font-serif);
-            font-weight: 700;
-            font-size: 1.25rem;
-            text-decoration: none;
-            color: var(--on-surface);
-            letter-spacing: 0.05em;
-        }
+            .nav-right a {
+                font-family: var(--font-sans);
+                font-weight: 700;
+                font-size: 0.75rem;
+                text-decoration: none;
+                color: var(--on-surface);
+                letter-spacing: 0.1em;
+                transition: color 0.3s ease;
+            }
 
-        .nav-right {
-            display: flex;
-            gap: 3rem;
-        }
+            .nav-right a:hover {
+                color: var(--primary);
+            }
 
-        .nav-right a {
-            font-family: var(--font-sans);
-            font-weight: 700;
-            font-size: 0.75rem;
-            text-decoration: none;
-            color: var(--on-surface);
-            letter-spacing: 0.1em;
-            transition: color 0.3s ease;
-        }
+            .footer-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+                text-align: center;
+            }
 
-        .nav-right a:hover {
-            color: var(--primary);
-        }
+            .footer-links {
+                display: flex;
+                gap: 2rem;
+            }
 
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-            text-align: center;
-        }
+            .footer-links a {
+                font-size: 0.75rem;
+                font-weight: 700;
+                text-decoration: none;
+                color: var(--on-surface);
+                opacity: 0.6;
+            }
 
-        .footer-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .footer-links a {
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-decoration: none;
-            color: var(--on-surface);
-            opacity: 0.6;
-        }
-
-        .copyright {
-            font-size: 0.65rem;
-            opacity: 0.4;
-            letter-spacing: 0.05em;
-        }
-    </style>
-</body>
+            .copyright {
+                font-size: 0.65rem;
+                opacity: 0.4;
+                letter-spacing: 0.05em;
+            }
+        </style>
+    </body>
 </html>

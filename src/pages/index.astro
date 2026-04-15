@@ -1,42 +1,41 @@
 ---
-import Layout from '../components/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Button from '../components/Button.astro';
-import MenuSection from '../components/MenuSection.astro';
+import Layout from "../components/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Button from "../components/Button.astro";
+import MenuSection from "../components/MenuSection.astro";
 ---
 
 <Layout title="Inicio">
-	<Hero 
-		title="EL ARTE DEL FUEGO Y LA TIERRA" 
+	<Hero
+		title="EL ARTE DEL FUEGO Y LA TIERRA"
 		subtitle="Una oda a la cocina ancestral, donde el humo y el sarmiento dictan el ritmo de cada plato."
-		image="/images/hero_steak.png"
+		images={[
+			"../images/hero_pollo.png",
+			"../images/hero_croquetas.png",
+			"../images/hero_tortilla.png",
+		]}
 	>
 		<Button href="/menu">Ver Carta</Button>
-		<Button href="/reserva" variant="secondary" class="ml-4">Reservar Mesa</Button>
+		<Button href="/reserva" variant="secondary" class="ml-4"
+			>Reservar Mesa</Button
+		>
 	</Hero>
 
 	<MenuSection title="Nuestra Propuesta" id="propuesta">
 		<div class="editorial-copy">
-			<p class="body-md">
-				Nuestros productos provienen de productores locales y respetan el ciclo natural de la tierra. 
-				La leña de encina y el sarmiento son los únicos elementos de cocción, preservando el sabor honesto del origen.
+			<p class="intro-p">
+				Nuestros productos provienen de productores locales y respetan
+				el ciclo natural de la tierra. La leña de encina y el sarmiento
+				son los únicos elementos de cocción, preservando el sabor
+				honesto del origen.
 			</p>
 			<div class="mt-8">
-				<Button href="/historia" variant="tertiary">Conoce nuestra historia</Button>
+				<Button href="/historia" variant="tertiary"
+					>Conoce nuestra historia</Button
+				>
 			</div>
 		</div>
 	</MenuSection>
-
-	<section class="gallery">
-		<div class="container asymmetric-grid">
-			<div class="gallery-item large">
-				<img src="/images/interior.png" alt="Grill" />
-			</div>
-			<div class="gallery-item small">
-				<img src="/images/charcoal.png" alt="Meat" />
-			</div>
-		</div>
-	</section>
 </Layout>
 
 <style>
@@ -52,10 +51,9 @@ import MenuSection from '../components/MenuSection.astro';
 		max-width: 600px;
 	}
 
-	.editorial-copy p {
-		font-style: italic;
-		font-size: 1.5rem;
-		line-height: 1.4;
+	.intro-p {
+		font: var(--display-md);
+		color: var(--on-surface);
 	}
 
 	.gallery {
@@ -78,7 +76,8 @@ import MenuSection from '../components/MenuSection.astro';
 	}
 
 	@media (max-width: 768px) {
-		.gallery-item.large, .gallery-item.small {
+		.gallery-item.large,
+		.gallery-item.small {
 			grid-column: 1 / 13;
 			padding-top: 0;
 			margin-bottom: 2rem;
