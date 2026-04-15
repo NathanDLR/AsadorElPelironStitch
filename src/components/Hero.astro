@@ -23,49 +23,56 @@ const {
         <div class="hero-text">
             <h1 class="display-lg">{title}</h1>
             {subtitle && <p class="body-md subtitle">{subtitle}</p>}
-            <div class="cta-group">
-                <slot />
-            </div>
         </div>
         <div class="hero-image">
             <Carousel images={images} height="500px" />
+        </div>
+        <div class="cta-group">
+            <slot />
         </div>
     </div>
 </section>
 
 <style>
     .hero-section {
-        padding: 8rem 0;
+        padding: 6rem 0 8rem;
         overflow: hidden;
     }
 
     .asymmetric-grid {
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        text-align: center;
+        gap: 4rem;
     }
 
     .display-lg {
         font: var(--display-lg);
         margin-bottom: 2rem;
         text-transform: uppercase;
+        max-width: 900px;
     }
 
     .hero-text {
-        grid-column: 1 / 7;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
         z-index: 2;
     }
 
     .subtitle {
         font: var(--body-md);
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
         opacity: 0.8;
         font-style: italic;
+        max-width: 600px;
     }
 
     .hero-image {
-        grid-column: 7 / 13;
+        width: 100%;
+        max-width: 1000px;
         position: relative;
     }
 
@@ -74,17 +81,16 @@ const {
             padding: 4rem 0;
         }
 
-        .hero-text {
-            grid-column: 1 / 13;
-            margin-bottom: 4rem;
-        }
-
-        .hero-image {
-            grid-column: 1 / 13;
+        .asymmetric-grid {
+            gap: 3rem;
         }
 
         .display-lg {
-            font-size: 3.5rem;
+            font-size: 3rem;
+        }
+
+        .hero-image {
+            max-width: 100%;
         }
     }
 </style>

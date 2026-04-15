@@ -54,24 +54,25 @@ const {
         <style>
             .editorial-nav {
                 display: flex;
-                justify-content: space-between;
+                flex-direction: column;
                 align-items: center;
-                padding: 2.5rem 0;
+                gap: 2rem;
+                padding: 3rem 0;
                 border-bottom: 1px solid rgba(137, 114, 108, 0.2);
             }
 
             .logo {
                 font-family: var(--font-serif);
                 font-weight: 700;
-                font-size: 1.25rem;
+                font-size: 1.5rem;
                 text-decoration: none;
                 color: var(--on-surface);
-                letter-spacing: 0.05em;
+                letter-spacing: 0.1em;
             }
 
             .nav-right {
                 display: flex;
-                gap: 3rem;
+                gap: 4rem;
             }
 
             .nav-right a {
@@ -94,6 +95,13 @@ const {
                 align-items: center;
                 gap: 2rem;
                 text-align: center;
+            }
+
+            .footer-brand {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
             }
 
             .footer-links {

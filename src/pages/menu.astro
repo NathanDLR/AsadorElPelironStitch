@@ -63,16 +63,21 @@ import MenuItem from '../components/MenuItem.astro';
     </MenuSection>
 
     <div class="container menu-footer section-spacer">
-        <div class="terracotta-thread"></div>
-        <p class="body-md footer-note">
-            Todos nuestros productos son de temporada. Consulte por nuestros pescados fuera de carta, traídos diariamente de las mejores lonjas.
-        </p>
+        <div class="footer-wrap">
+            <div class="terracotta-thread"></div>
+            <p class="body-md footer-note">
+                Todos nuestros productos son de temporada. Consulte por nuestros pescados fuera de carta, traídos diariamente de las mejores lonjas.
+            </p>
+        </div>
     </div>
 </Layout>
 
 <style>
     .menu-intro {
-        text-align: left;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding-top: 10rem;
     }
 
@@ -84,15 +89,21 @@ import MenuItem from '../components/MenuItem.astro';
 
     .intro-text {
         font: var(--body-lg);
-        max-width: 500px;
+        max-width: 600px;
         opacity: 0.8;
     }
 
     .menu-footer {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
         border-top: 1px solid rgba(137, 114, 108, 0.2);
+    }
+
+    .footer-wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        text-align: center;
     }
 
     .footer-note {

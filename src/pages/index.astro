@@ -7,8 +7,7 @@ import MenuSection from "../components/MenuSection.astro";
 
 <Layout title="Inicio">
 	<Hero
-		title="EL ARTE DEL FUEGO Y LA TIERRA"
-		subtitle="Una oda a la cocina ancestral, donde el humo y el sarmiento dictan el ritmo de cada plato."
+		title="BIENVENIDOS A NUESTRA CASA"
 		images={[
 			"../images/hero_pollo.png",
 			"../images/hero_croquetas.png",
@@ -16,23 +15,25 @@ import MenuSection from "../components/MenuSection.astro";
 		]}
 	>
 		<Button href="/menu">Ver Carta</Button>
-		<Button href="/reserva" variant="secondary" class="ml-4"
-			>Reservar Mesa</Button
-		>
 	</Hero>
 
-	<MenuSection title="Nuestra Propuesta" id="propuesta">
+	<MenuSection title="¿Dónde estamos?" id="donde-estamos">
 		<div class="editorial-copy">
 			<p class="intro-p">
-				Nuestros productos provienen de productores locales y respetan
-				el ciclo natural de la tierra. La leña de encina y el sarmiento
-				son los únicos elementos de cocción, preservando el sabor
-				honesto del origen.
+				Puedes encontrarnos en la Avenida Ronda del Pelirón 49, o haz
+				clic en el mapa para obtener indicaciones.
 			</p>
-			<div class="mt-8">
-				<Button href="/historia" variant="tertiary"
-					>Conoce nuestra historia</Button
-				>
+			<div class="map-wrapper">
+				<iframe 
+					src="https://www.google.com/maps?q=Av.+Ronda+del+Pelirón,+49,+Jerez+de+la+Frontera&output=embed" 
+					width="100%" 
+					height="450" 
+					style="border:0;" 
+					allowfullscreen="" 
+					loading="lazy" 
+					referrerpolicy="no-referrer-when-downgrade"
+					title="Ubicación Asador El Pelirón"
+				></iframe>
 			</div>
 		</div>
 	</MenuSection>
@@ -49,11 +50,31 @@ import MenuSection from "../components/MenuSection.astro";
 
 	.editorial-copy {
 		max-width: 600px;
+		margin: 0 auto;
+		text-align: center;
 	}
 
 	.intro-p {
-		font: var(--display-md);
+		font: var(--body-md);
 		color: var(--on-surface);
+		line-height: 1.6;
+		margin-bottom: 2rem;
+	}
+
+	.map-wrapper {
+		width: 100%;
+		border: 1px solid var(--outline-variant);
+		filter: grayscale(0.4) contrast(0.9);
+		transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.map-wrapper:hover {
+		filter: grayscale(0) contrast(1);
+		border-color: var(--primary);
+	}
+
+	.map-wrapper iframe {
+		display: block;
 	}
 
 	.gallery {

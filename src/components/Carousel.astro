@@ -104,6 +104,30 @@ const { images, interval = 6500, height = "600px" } = Astro.props;
                 });
             });
 
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            carousel.addEventListener("touchstart", (e: any) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            carousel.addEventListener("touchend", (e: any) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
+
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                if (touchEndX < touchStartX - swipeThreshold) {
+                    nextSlide();
+                    resetTimer();
+                }
+                if (touchEndX > touchStartX + swipeThreshold) {
+                    showSlide((currentIndex - 1 + items.length) % items.length);
+                    resetTimer();
+                }
+            }
+
             startTimer();
         });
     }

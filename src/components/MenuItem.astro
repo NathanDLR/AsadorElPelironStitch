@@ -19,13 +19,18 @@ const { name, description, price } = Astro.props;
 <style>
     .menu-item {
         margin-bottom: 3.5rem;
-        max-width: 800px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .item-header {
         display: flex;
-        justify-content: space-between;
-        align-items: baseline;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
         margin-bottom: 0.75rem;
     }
 
@@ -45,12 +50,12 @@ const { name, description, price } = Astro.props;
         font: var(--body-sm);
         color: var(--on-surface);
         opacity: 0.6;
-        padding-left: 4rem; /* Asymmetric staircase flow */
+        max-width: 500px;
     }
 
     @media (max-width: 600px) {
-        .item-description {
-            padding-left: 1.5rem;
+        .menu-item {
+            margin-bottom: 2.5rem;
         }
     }
 </style>
