@@ -1,72 +1,344 @@
 ---
-import Layout from '../components/Layout.astro';
-import MenuSection from '../components/MenuSection.astro';
-import MenuItem from '../components/MenuItem.astro';
+import Layout from "../components/Layout.astro";
+import MenuSection from "../components/MenuSection.astro";
+import MenuItem from "../components/MenuItem.astro";
+import CategoryNav from "../components/CategoryNav.astro";
+
 ---
 
-<Layout title="Nuestra Carta" description="Explora el sabor del fuego en nuestra carta seleccionada.">
+<Layout
+    title="Nuestra Carta"
+    description="Conoce nuestra carta y disfruta de nuestros productos cocinados a diario para ti."
+>
     <div class="menu-intro container section-spacer">
-        <h1 class="display-lg">NUESTRA PROPUESTA</h1>
+        <h1 class="display-lg">NUESTRA CARTA</h1>
         <p class="body-md intro-text">
-            Una selección de productos honestos, tratados con respeto y expuestos al fuego directo de la encina. 
-            Sin artificios, solo el origen.
+            Conoce nuestra carta y disfruta de nuestros productos cocinados a
+            diario para ti.
         </p>
     </div>
 
-    <MenuSection title="Entrantes" id="entrantes">
-        <MenuItem 
-            name="Cecina de León Selección" 
-            description="Curación mínima de 18 meses, corte fino a cuchillo con aceite de oliva virgen extra de cosecha propia."
-            price="18€"
-        />
-        <MenuItem 
-            name="Puerros de la Huerta a la Llama" 
-            description="Con emulsión de romesco ahumado y lascas de almendra marcona tostada."
-            price="14€"
-        />
-        <MenuItem 
-            name="Mollejas de Ternera al Sarmiento" 
-            description="Crujientes por fuera y melosas por dentro, acompañadas de crema de coliflor trufada."
-            price="22€"
-        />
+    <CategoryNav />
+
+
+
+    <MenuSection title="Menús" id="ofertas">
+
+        <div class="menu-grid">
+            <MenuItem
+                name="Ofertas Nº1 A"
+                description={["Pollo Asado", "Tarrina de patatas grande"]}
+                price="17,00 €"
+                variant="featured"
+            />
+
+            <MenuItem
+                name="Ofertas Nº1 B"
+                description={["Pollo Asado", "Tarrina de patatas mediana", "1/4 Croquetas de jamón"]}
+                price="18,00 €"
+                variant="featured"
+            />
+
+            <MenuItem
+                name="Oferta Nº2"
+                description={[
+                    "Pollo Asado",
+                    "Elegir: Tortilla, Aliño ó 1/4 Empanados",
+                    "Elegir: 1/4 Croquetas ó Patatas medianas",
+                    "Aceitunas, pan o picos"
+                ]}
+                price="19,50 €"
+                variant="featured"
+            />
+
+            <MenuItem
+                name="Oferta Nº3 - Menú Familiar"
+                description={[
+                    "Pollo Asado",
+                    "Tarrina de patatas grande",
+                    "Elegir: 1/4 Empanados, Aliño ó Tortilla",
+                    "1/4 Croquetas de jamón",
+                    "Refresco 2L o Cerveza 1L"
+                ]}
+                price="23,50 €"
+                variant="featured"
+            />
+
+            <MenuItem
+                name="Oferta 2 Pollos"
+                description={["2 Pollos Asados"]}
+                price="24,50 €"
+                variant="featured"
+            />
+
+            <MenuItem
+                name="Oferta Medio Pollo"
+                description={[
+                    "1/2 Pollo Asado con patatas",
+                    "Lata de refresco 33cl",
+                    "Elegir: Aceitunas, Pan ó Picos"
+                ]}
+                price="10,50 €"
+                variant="featured"
+            />
+
+            <MenuItem
+                name="Oferta Sin Pollo"
+                description={[
+                    "Tortilla",
+                    "Aliño",
+                    "1/4 Empanados",
+                    "Elegir: Aceitunas, Pan ó Picos"
+                ]}
+                price="14,00 €"
+                variant="featured"
+            />
+
+            <MenuItem
+                name="Super Oferta"
+                description={[
+                    "2 Pollos Asados",
+                    "Tarrina de patatas grande",
+                    "1/4 Empanados",
+                    "Aliño",
+                    "Tortilla",
+                    "Refresco 2L ó Cerveza 1L"
+                ]}
+                price="39,50 €"
+                variant="featured"
+            />
+
+            <MenuItem
+                name="Oferta Anetos"
+                description={["4 Anetos", "Tarrina de patatas grande"]}
+                price="17,00 €"
+                variant="featured"
+            />
+
+            <MenuItem
+                name="Oferta Campera"
+                description={[
+                    "Pollo Asado",
+                    "1/4 Empanados",
+                    "1 Tortilla",
+                    "Refresco 2L ó Cerveza 1L"
+                ]}
+                price="21,50 €"
+                variant="featured"
+            />
+
+        </div>
     </MenuSection>
 
-    <MenuSection title="Carnes a la Brasa" id="carnes">
-        <MenuItem 
-            name="Chuleta de Vaca Vieja (1kg)" 
-            description="Selección de razas autóctonas, maduración mínima de 45 días en nuestra propia cámara. Sabor intenso y textura fundente."
-            price="75€"
-        />
-        <MenuItem 
-            name="Solomillo de Ternera de Ávila" 
-            description="Al fuego de encina, servido con sal de escamas y pimientos del cristal confitados."
-            price="32€"
-        />
-        <MenuItem 
-            name="Lechazo de Aranda al Horno de Leña" 
-            description="Cuarto de cordero lechal asado al estilo tradicional en horno de adobe. (Encargo previo 24h)."
-            price="58€"
-        />
-    </MenuSection>
+    <MenuSection title="Artículos" id="articulos">
+        <div class="subcategory" id="pollo">
+            <h3 class="subcategory-title">POLLO</h3>
 
-    <MenuSection title="Postres" id="postres">
-        <MenuItem 
-            name="Tarta de Queso 'El Ahumado'" 
-            description="Queso de oveja local con un sutil toque de humo de sarmiento y base de galleta artesana."
-            price="9€"
-        />
-        <MenuItem 
-            name="Torrija Caramelizada" 
-            description="Pan de brioche artesano infusionado en leche de oveja y acompañada de helado de vainilla Bourbon."
-            price="10€"
-        />
+
+
+            <div class="menu-grid">
+                <MenuItem name="Pollo asado" description="" price="13,20 €" />
+                <MenuItem
+                    name="Pollo asado al limón"
+                    description="(Solo por encargo)"
+                    price="13,20 €"
+                />
+                <MenuItem
+                    name="1/2 Pollo asado"
+                    description=""
+                    price="8,00 €"
+                />
+                <MenuItem
+                    name="1/2 Pollo asado con patatas dentro"
+                    description=""
+                    price="9,00 €"
+                />
+            </div>
+        </div>
+
+        <div class="subcategory" id="patatas">
+            <h3 class="subcategory-title">PATATAS</h3>
+
+
+
+            <div class="menu-grid">
+                <MenuItem
+                    name="Tarrina de patatas grande"
+                    description=""
+                    price="4,00 €"
+                />
+                <MenuItem
+                    name="Tarrina de patatas mediana"
+                    description=""
+                    price="3,00 €"
+                />
+                <MenuItem
+                    name="Tarrina de patatas pequeña"
+                    description=""
+                    price="1,00 €"
+                />
+            </div>
+        </div>
+
+        <div class="subcategory" id="tortillas">
+            <h3 class="subcategory-title">TORTILLAS</h3>
+
+
+
+            <div class="menu-grid">
+                <MenuItem
+                    name="Tortilla Normal"
+                    description=""
+                    price="5,50 €"
+                />
+                <MenuItem
+                    name="Tortilla Pimiento y cebolla"
+                    description=""
+                    price="6,00 €"
+                />
+                <MenuItem
+                    name="Tortilla Chistorra"
+                    description=""
+                    price="6,00 €"
+                />
+                <MenuItem
+                    name="Tortilla Campera"
+                    description=""
+                    price="6,50 €"
+                />
+            </div>
+        </div>
+
+        <div class="subcategory" id="empanados">
+            <h3 class="subcategory-title">EMPANADOS</h3>
+
+
+
+            <div class="menu-grid">
+                <MenuItem
+                    name="1/4 Croquetas caseras"
+                    description=""
+                    price="4,50 €"
+                />
+                <MenuItem
+                    name="1/4 Croquetas de jamón"
+                    description=""
+                    price="3,00 €"
+                />
+                <MenuItem
+                    name="1/4 Filetes de pollo"
+                    description=""
+                    price="4,50 €"
+                />
+                <MenuItem name="1/4 Lagrimitas" description="" price="4,50 €" />
+                <MenuItem
+                    name="1/4 Langostinos bechamel"
+                    description=""
+                    price="4,50 €"
+                />
+                <MenuItem
+                    name="1/4 Pechuguitas bechamel"
+                    description=""
+                    price="4,50 €"
+                />
+                <MenuItem
+                    name="6 Huevos bechamel"
+                    description=""
+                    price="4,50 €"
+                />
+                <MenuItem
+                    name="Aneto"
+                    description="(Patatas dentro +1€)"
+                    price="4,50 €"
+                />
+            </div>
+        </div>
+
+        <div class="subcategory" id="alinos">
+            <h3 class="subcategory-title">ALIÑOS</h3>
+
+
+
+            <div class="menu-grid">
+                <MenuItem
+                    name="Huevas aliñadas"
+                    description=""
+                    price="5,00 €"
+                />
+                <MenuItem
+                    name="Salpicón de marisco"
+                    description=""
+                    price="5,00 €"
+                />
+                <MenuItem name="Patatas Alioli" description="" price="4,00 €" />
+                <MenuItem
+                    name="Pimientos asados"
+                    description=""
+                    price="4,00 €"
+                />
+                <MenuItem name="Ensaladilla" description="" price="5,00 €" />
+                <MenuItem
+                    name="Zanahorias aliñadas"
+                    description=""
+                    price="3,00 €"
+                />
+            </div>
+        </div>
+
+        <div class="subcategory" id="bebidas">
+            <h3 class="subcategory-title">BEBIDAS</h3>
+
+
+
+            <div class="menu-grid">
+                <MenuItem
+                    name="Lata de refresco 33cl"
+                    description=""
+                    price="1,20 €"
+                />
+                <MenuItem
+                    name="Lata de cerveza 33cl"
+                    description=""
+                    price="1,20 €"
+                />
+                <MenuItem
+                    name="Botella de refresco 2L"
+                    description=""
+                    price="2,50 €"
+                />
+                <MenuItem
+                    name="Botella de agua 1.5L"
+                    description=""
+                    price="1,20 €"
+                />
+                <MenuItem
+                    name="Botella de agua 0.5L"
+                    description=""
+                    price="0,50 €"
+                />
+                <MenuItem name="Cerveza 1L" description="" price="2,20 €" />
+            </div>
+        </div>
+
+        <div class="subcategory" id="complementos">
+            <h3 class="subcategory-title">COMPLEMENTOS</h3>
+
+
+
+            <div class="menu-grid">
+                <MenuItem name="Aceitunas" description="" price="1,20 €" />
+                <MenuItem name="Pan" description="" price="0,70 €" />
+                <MenuItem name="Picos" description="" price="1,20 €" />
+            </div>
+        </div>
     </MenuSection>
 
     <div class="container menu-footer section-spacer">
         <div class="footer-wrap">
             <div class="terracotta-thread"></div>
             <p class="body-md footer-note">
-                Todos nuestros productos son de temporada. Consulte por nuestros pescados fuera de carta, traídos diariamente de las mejores lonjas.
+                Si necesita información de alérgenos, por favor, pregunte a
+                nuestro personal.
             </p>
         </div>
     </div>
@@ -78,8 +350,9 @@ import MenuItem from '../components/MenuItem.astro';
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 10rem;
+        padding-top: 2rem;
     }
+
 
     .display-lg {
         font: var(--display-lg);
@@ -91,6 +364,74 @@ import MenuItem from '../components/MenuItem.astro';
         font: var(--body-lg);
         max-width: 600px;
         opacity: 0.8;
+        padding: 0 1rem;
+    }
+
+    .subcategory {
+        margin-bottom: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        scroll-margin-top: 8rem;
+    }
+
+    /* Support for section anchor jumping */
+    :global(section.section-spacer) {
+        scroll-margin-top: 8rem;
+    }
+
+
+
+
+    .subcategory-title {
+        font: var(--title-lg);
+        color: var(--primary);
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        margin-bottom: 2.5rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+        scroll-margin-top: 8rem;
+    }
+
+
+
+    .subcategory-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30px;
+        height: 1px;
+        background: var(--primary);
+        opacity: 0.4;
+    }
+
+    .menu-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .menu-grid :global(.menu-item) {
+        margin-bottom: 0;
+    }
+
+    @media (min-width: 768px) {
+        .menu-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem 4rem;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .menu-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 
     .menu-footer {
@@ -114,8 +455,28 @@ import MenuItem from '../components/MenuItem.astro';
     }
 
     @media (max-width: 768px) {
+        .footer-wrap {
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
         .display-lg {
-            font-size: 3.5rem;
+            font-size: 3rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .display-lg {
+            font-size: 2.25rem;
+        }
+
+        .subcategory-title {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
         }
     }
 </style>
+
+

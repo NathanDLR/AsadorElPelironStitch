@@ -1,30 +1,57 @@
 ---
 interface Props {
   name: string;
-  description: string;
+  description: string | string[];
   price: string;
+  variant?: 'standard' | 'featured';
 }
 
-const { name, description, price } = Astro.props;
+const { name, description, price, variant = 'standard' } = Astro.props;
+const isArray = Array.isArray(description);
 ---
 
-<div class="menu-item">
+<div class:list={["menu-item", variant]}>
+
     <div class="item-header">
         <h3 class="item-name">{name}</h3>
         <span class="item-price">{price}</span>
     </div>
-    <p class="item-description">{description}</p>
+    {isArray ? (
+        <ul class="item-description-list">
+            {(description as string[]).map(line => (
+                <li>{line}</li>
+            ))}
+        </ul>
+    ) : (
+        <p class="item-description">{description}</p>
+    )}
 </div>
+
 
 <style>
     .menu-item {
-        margin-bottom: 3.5rem;
+        margin-bottom: 2rem;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 1.5rem 1rem;
+        transition: transform 0.3s ease;
     }
+
+    .menu-item.featured {
+        background: var(--surface-container-low);
+        border: 1px solid rgba(137, 114, 108, 0.15);
+        padding: 2rem 1.5rem;
+    }
+
+    .menu-item.featured:hover {
+        transform: translateY(-4px);
+        background: var(--surface-container);
+    }
+
+
 
     .item-header {
         display: flex;
@@ -46,12 +73,37 @@ const { name, description, price } = Astro.props;
         color: var(--primary);
     }
 
-    .item-description {
+    .item-description,
+    .item-description-list {
         font: var(--body-sm);
         color: var(--on-surface);
-        opacity: 0.6;
+        opacity: 0.7;
         max-width: 500px;
+        margin: 0;
+        padding: 0;
     }
+
+    .item-description-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .item-description-list li {
+        font: var(--body-sm);
+        letter-spacing: 0.02em;
+        position: relative;
+    }
+
+    .featured .item-description-list li::before {
+        content: "—";
+        margin-right: 0.75rem;
+        opacity: 0.3;
+        font-weight: 300;
+    }
+
+
 
     @media (max-width: 600px) {
         .menu-item {

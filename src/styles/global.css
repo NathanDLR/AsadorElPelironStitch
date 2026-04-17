@@ -42,11 +42,19 @@
   --label-sm: normal 700 0.65rem/1 var(--font-sans);
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+}
+
+
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 
 body {
   background-color: var(--bg);
@@ -74,6 +82,13 @@ button, input, textarea, .card {
   padding: 0 2rem;
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
+
 .asymmetric-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -92,3 +107,10 @@ button, input, textarea, .card {
 .section-spacer {
   padding: 6rem 0;
 }
+
+@media (max-width: 768px) {
+  .section-spacer {
+    padding: 4rem 0;
+  }
+}
+
