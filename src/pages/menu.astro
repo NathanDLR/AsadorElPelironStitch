@@ -3,7 +3,6 @@ import Layout from "../components/Layout.astro";
 import MenuSection from "../components/MenuSection.astro";
 import MenuItem from "../components/MenuItem.astro";
 import CategoryNav from "../components/CategoryNav.astro";
-
 ---
 
 <Layout
@@ -20,10 +19,7 @@ import CategoryNav from "../components/CategoryNav.astro";
 
     <CategoryNav />
 
-
-
     <MenuSection title="Menús" id="ofertas">
-
         <div class="menu-grid">
             <MenuItem
                 name="Ofertas Nº1 A"
@@ -34,7 +30,11 @@ import CategoryNav from "../components/CategoryNav.astro";
 
             <MenuItem
                 name="Ofertas Nº1 B"
-                description={["Pollo Asado", "Tarrina de patatas mediana", "1/4 Croquetas de jamón"]}
+                description={[
+                    "Pollo Asado",
+                    "Tarrina de patatas mediana",
+                    "1/4 Croquetas de jamón",
+                ]}
                 price="18,00 €"
                 variant="featured"
             />
@@ -45,7 +45,7 @@ import CategoryNav from "../components/CategoryNav.astro";
                     "Pollo Asado",
                     "Elegir: Tortilla, Aliño ó 1/4 Empanados",
                     "Elegir: 1/4 Croquetas ó Patatas medianas",
-                    "Aceitunas, pan o picos"
+                    "Elegir: Aceitunas, pan ó picos",
                 ]}
                 price="19,50 €"
                 variant="featured"
@@ -58,7 +58,7 @@ import CategoryNav from "../components/CategoryNav.astro";
                     "Tarrina de patatas grande",
                     "Elegir: 1/4 Empanados, Aliño ó Tortilla",
                     "1/4 Croquetas de jamón",
-                    "Refresco 2L o Cerveza 1L"
+                    "Refresco 2L o Cerveza 1L",
                 ]}
                 price="23,50 €"
                 variant="featured"
@@ -76,7 +76,7 @@ import CategoryNav from "../components/CategoryNav.astro";
                 description={[
                     "1/2 Pollo Asado con patatas",
                     "Lata de refresco 33cl",
-                    "Elegir: Aceitunas, Pan ó Picos"
+                    "Elegir: Aceitunas, Pan ó Picos",
                 ]}
                 price="10,50 €"
                 variant="featured"
@@ -88,7 +88,7 @@ import CategoryNav from "../components/CategoryNav.astro";
                     "Tortilla",
                     "Aliño",
                     "1/4 Empanados",
-                    "Elegir: Aceitunas, Pan ó Picos"
+                    "Elegir: Aceitunas, Pan ó Picos",
                 ]}
                 price="14,00 €"
                 variant="featured"
@@ -102,7 +102,7 @@ import CategoryNav from "../components/CategoryNav.astro";
                     "1/4 Empanados",
                     "Aliño",
                     "Tortilla",
-                    "Refresco 2L ó Cerveza 1L"
+                    "Refresco 2L ó Cerveza 1L",
                 ]}
                 price="39,50 €"
                 variant="featured"
@@ -121,20 +121,17 @@ import CategoryNav from "../components/CategoryNav.astro";
                     "Pollo Asado",
                     "1/4 Empanados",
                     "1 Tortilla",
-                    "Refresco 2L ó Cerveza 1L"
+                    "Refresco 2L ó Cerveza 1L",
                 ]}
                 price="21,50 €"
                 variant="featured"
             />
-
         </div>
     </MenuSection>
 
     <MenuSection title="Artículos" id="articulos">
         <div class="subcategory" id="pollo">
             <h3 class="subcategory-title">POLLO</h3>
-
-
 
             <div class="menu-grid">
                 <MenuItem name="Pollo asado" description="" price="13,20 €" />
@@ -159,8 +156,6 @@ import CategoryNav from "../components/CategoryNav.astro";
         <div class="subcategory" id="patatas">
             <h3 class="subcategory-title">PATATAS</h3>
 
-
-
             <div class="menu-grid">
                 <MenuItem
                     name="Tarrina de patatas grande"
@@ -182,8 +177,6 @@ import CategoryNav from "../components/CategoryNav.astro";
 
         <div class="subcategory" id="tortillas">
             <h3 class="subcategory-title">TORTILLAS</h3>
-
-
 
             <div class="menu-grid">
                 <MenuItem
@@ -211,8 +204,6 @@ import CategoryNav from "../components/CategoryNav.astro";
 
         <div class="subcategory" id="empanados">
             <h3 class="subcategory-title">EMPANADOS</h3>
-
-
 
             <div class="menu-grid">
                 <MenuItem
@@ -257,8 +248,6 @@ import CategoryNav from "../components/CategoryNav.astro";
         <div class="subcategory" id="alinos">
             <h3 class="subcategory-title">ALIÑOS</h3>
 
-
-
             <div class="menu-grid">
                 <MenuItem
                     name="Huevas aliñadas"
@@ -287,8 +276,6 @@ import CategoryNav from "../components/CategoryNav.astro";
 
         <div class="subcategory" id="bebidas">
             <h3 class="subcategory-title">BEBIDAS</h3>
-
-
 
             <div class="menu-grid">
                 <MenuItem
@@ -323,8 +310,6 @@ import CategoryNav from "../components/CategoryNav.astro";
         <div class="subcategory" id="complementos">
             <h3 class="subcategory-title">COMPLEMENTOS</h3>
 
-
-
             <div class="menu-grid">
                 <MenuItem name="Aceitunas" description="" price="1,20 €" />
                 <MenuItem name="Pan" description="" price="0,70 €" />
@@ -353,7 +338,6 @@ import CategoryNav from "../components/CategoryNav.astro";
         padding-top: 2rem;
     }
 
-
     .display-lg {
         font: var(--display-lg);
         margin-bottom: 2rem;
@@ -380,9 +364,6 @@ import CategoryNav from "../components/CategoryNav.astro";
         scroll-margin-top: 8rem;
     }
 
-
-
-
     .subcategory-title {
         font: var(--title-lg);
         color: var(--primary);
@@ -393,8 +374,6 @@ import CategoryNav from "../components/CategoryNav.astro";
         padding-bottom: 0.5rem;
         scroll-margin-top: 8rem;
     }
-
-
 
     .subcategory-title::after {
         content: "";
@@ -478,5 +457,3 @@ import CategoryNav from "../components/CategoryNav.astro";
         }
     }
 </style>
-
-

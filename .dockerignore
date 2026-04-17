@@ -1,0 +1,10 @@
+node_modules
+dist
+.git
+.vscode
+.astro
+.npm
+package-lock.json
+Dockerfile
+.dockerignore
+README.md
