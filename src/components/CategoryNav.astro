@@ -163,7 +163,10 @@ const categories = [
     scrollbar-width: none; /* Hide scrollbar for Firefox */
     justify-content: center;
     -webkit-overflow-scrolling: touch;
+    overflow-y: hidden;
+    touch-action: pan-x;
   }
+
 
   .nav-wrap::-webkit-scrollbar {
     display: none; /* Hide scrollbar for Chrome/Safari */
