@@ -24,7 +24,7 @@
   --secondary-container: #425246;
   --on-secondary: #fcf9f4;
   
-  --surface-alt: #f1f3ef;
+  --surface-alt: #e9ede8;
   
   --outline: #89726c;
   --outline-variant: #ddc0b9;
@@ -115,24 +115,35 @@ button, input, textarea, .card {
   padding: 6rem 0;
 }
 
+.menu-stage {
+  position: relative;
+  min-height: 400px;
+  background: var(--surface-alt);
+  border-top: 1px solid rgba(137, 114, 108, 0.1);
+  border-bottom: 1px solid rgba(137, 114, 108, 0.1);
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
 .menu-card {
   display: none;
   width: 100%;
+  opacity: 0;
 }
 
 .menu-card.active {
   display: block;
-  animation: menuEntry 0.6s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+  animation: menuEntryFade 0.6s cubic-bezier(0.2, 1, 0.3, 1) forwards;
 }
 
-@keyframes menuEntry {
+@keyframes menuEntryFade {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px) scale(0.99);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 

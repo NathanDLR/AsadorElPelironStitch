@@ -19,308 +19,332 @@ import CategoryNav from "../components/CategoryNav.astro";
 
     <CategoryNav />
 
-    <div id="ofertas" class="menu-card active section-alt section-spacer">
-        <MenuSection title="Menús">
+    <div class="menu-stage">
+        <div id="ofertas" class="menu-card active">
+            <div class="section-spacer">
+                <MenuSection title="Menús">
+                    <div class="menu-grid">
+                        <MenuItem
+                            name="Oferta Nº1 A"
+                            description={[
+                                "Pollo Asado",
+                                "Tarrina de patatas grande",
+                            ]}
+                            price="17,00 €"
+                            variant="featured"
+                        />
 
-            <div class="menu-grid">
-                <MenuItem
-                    name="Ofertas Nº1 A"
-                    description={["Pollo Asado", "Tarrina de patatas grande"]}
-                    price="17,00 €"
-                    variant="featured"
-                />
+                        <MenuItem
+                            name="Oferta Nº1 B"
+                            description={[
+                                "Pollo Asado",
+                                "Tarrina de patatas mediana",
+                                "1/4 Croquetas de jamón",
+                            ]}
+                            price="18,00 €"
+                            variant="featured"
+                        />
 
-                <MenuItem
-                    name="Ofertas Nº1 B"
-                    description={[
-                        "Pollo Asado",
-                        "Tarrina de patatas mediana",
-                        "1/4 Croquetas de jamón",
-                    ]}
-                    price="18,00 €"
-                    variant="featured"
-                />
+                        <MenuItem
+                            name="Oferta Nº2"
+                            description={[
+                                "Pollo Asado",
+                                "Elegir: Tortilla, Aliño ó 1/4 Empanados",
+                                "Elegir: 1/4 Croquetas ó Patatas medianas",
+                                "Elegir: Aceitunas, pan ó picos",
+                            ]}
+                            price="19,50 €"
+                            variant="featured"
+                        />
 
-                <MenuItem
-                    name="Oferta Nº2"
-                    description={[
-                        "Pollo Asado",
-                        "Elegir: Tortilla, Aliño ó 1/4 Empanados",
-                        "Elegir: 1/4 Croquetas ó Patatas medianas",
-                        "Elegir: Aceitunas, pan ó picos",
-                    ]}
-                    price="19,50 €"
-                    variant="featured"
-                />
+                        <MenuItem
+                            name="Oferta Nº3 - Menú Familiar"
+                            description={[
+                                "Pollo Asado",
+                                "Tarrina de patatas grande",
+                                "Elegir: 1/4 Empanados, Aliño ó Tortilla",
+                                "1/4 Croquetas de jamón",
+                                "Refresco 2L o Cerveza 1L",
+                            ]}
+                            price="23,50 €"
+                            variant="featured"
+                        />
 
-                <MenuItem
-                    name="Oferta Nº3 - Menú Familiar"
-                    description={[
-                        "Pollo Asado",
-                        "Tarrina de patatas grande",
-                        "Elegir: 1/4 Empanados, Aliño ó Tortilla",
-                        "1/4 Croquetas de jamón",
-                        "Refresco 2L o Cerveza 1L",
-                    ]}
-                    price="23,50 €"
-                    variant="featured"
-                />
+                        <MenuItem
+                            name="Oferta 2 Pollos"
+                            description={["2 Pollos Asados"]}
+                            price="24,50 €"
+                            variant="featured"
+                        />
 
-                <MenuItem
-                    name="Oferta 2 Pollos"
-                    description={["2 Pollos Asados"]}
-                    price="24,50 €"
-                    variant="featured"
-                />
+                        <MenuItem
+                            name="Oferta Medio Pollo"
+                            description={[
+                                "1/2 Pollo Asado con patatas",
+                                "Lata de refresco 33cl",
+                                "Elegir: Aceitunas, Pan ó Picos",
+                            ]}
+                            price="10,50 €"
+                            variant="featured"
+                        />
 
-                <MenuItem
-                    name="Oferta Medio Pollo"
-                    description={[
-                        "1/2 Pollo Asado con patatas",
-                        "Lata de refresco 33cl",
-                        "Elegir: Aceitunas, Pan ó Picos",
-                    ]}
-                    price="10,50 €"
-                    variant="featured"
-                />
+                        <MenuItem
+                            name="Oferta Sin Pollo"
+                            description={[
+                                "Tortilla",
+                                "Aliño",
+                                "1/4 Empanados",
+                                "Elegir: Aceitunas, Pan ó Picos",
+                            ]}
+                            price="14,00 €"
+                            variant="featured"
+                        />
 
-                <MenuItem
-                    name="Oferta Sin Pollo"
-                    description={[
-                        "Tortilla",
-                        "Aliño",
-                        "1/4 Empanados",
-                        "Elegir: Aceitunas, Pan ó Picos",
-                    ]}
-                    price="14,00 €"
-                    variant="featured"
-                />
+                        <MenuItem
+                            name="Super Oferta"
+                            description={[
+                                "2 Pollos Asados",
+                                "Tarrina de patatas grande",
+                                "1/4 Empanados",
+                                "Aliño",
+                                "Tortilla",
+                                "Refresco 2L ó Cerveza 1L",
+                            ]}
+                            price="39,50 €"
+                            variant="featured"
+                        />
 
-                <MenuItem
-                    name="Super Oferta"
-                    description={[
-                        "2 Pollos Asados",
-                        "Tarrina de patatas grande",
-                        "1/4 Empanados",
-                        "Aliño",
-                        "Tortilla",
-                        "Refresco 2L ó Cerveza 1L",
-                    ]}
-                    price="39,50 €"
-                    variant="featured"
-                />
+                        <MenuItem
+                            name="Oferta Anetos"
+                            description={[
+                                "4 Anetos",
+                                "Tarrina de patatas grande",
+                            ]}
+                            price="17,00 €"
+                            variant="featured"
+                        />
 
-                <MenuItem
-                    name="Oferta Anetos"
-                    description={["4 Anetos", "Tarrina de patatas grande"]}
-                    price="17,00 €"
-                    variant="featured"
-                />
+                        <MenuItem
+                            name="Oferta Campera"
+                            description={[
+                                "Pollo Asado",
+                                "1/4 Empanados",
+                                "1 Tortilla",
+                                "Refresco 2L ó Cerveza 1L",
+                            ]}
+                            price="21,50 €"
+                            variant="featured"
+                        />
+                    </div>
+                </MenuSection>
+            </div>
+        </div>
 
-                <MenuItem
-                    name="Oferta Campera"
-                    description={[
-                        "Pollo Asado",
-                        "1/4 Empanados",
-                        "1 Tortilla",
-                        "Refresco 2L ó Cerveza 1L",
-                    ]}
-                    price="21,50 €"
-                    variant="featured"
-                />
-        </MenuSection>
+        <div class="menu-cards-container container">
+            <div class="subcategory menu-card section-spacer" id="pollo">
+                <h3 class="subcategory-title">POLLO</h3>
+
+                <div class="menu-grid">
+                    <MenuItem
+                        name="Pollo asado"
+                        description=""
+                        price="13,20 €"
+                    />
+                    <MenuItem
+                        name="Pollo asado al limón"
+                        description="(Solo por encargo)"
+                        price="13,20 €"
+                    />
+                    <MenuItem
+                        name="1/2 Pollo asado"
+                        description=""
+                        price="8,00 €"
+                    />
+                    <MenuItem
+                        name="1/2 Pollo asado con patatas dentro"
+                        description=""
+                        price="9,00 €"
+                    />
+                </div>
+            </div>
+
+            <div class="subcategory menu-card" id="patatas">
+                <h3 class="subcategory-title">PATATAS</h3>
+
+                <div class="menu-grid">
+                    <MenuItem
+                        name="Tarrina de patatas grande"
+                        description=""
+                        price="4,00 €"
+                    />
+                    <MenuItem
+                        name="Tarrina de patatas mediana"
+                        description=""
+                        price="3,00 €"
+                    />
+                    <MenuItem
+                        name="Tarrina de patatas pequeña"
+                        description=""
+                        price="1,00 €"
+                    />
+                </div>
+            </div>
+
+            <div class="subcategory menu-card" id="tortillas">
+                <h3 class="subcategory-title">TORTILLAS</h3>
+
+                <div class="menu-grid">
+                    <MenuItem
+                        name="Tortilla Normal"
+                        description=""
+                        price="5,50 €"
+                    />
+                    <MenuItem
+                        name="Tortilla Pimiento y cebolla"
+                        description=""
+                        price="6,00 €"
+                    />
+                    <MenuItem
+                        name="Tortilla Chistorra"
+                        description=""
+                        price="6,00 €"
+                    />
+                    <MenuItem
+                        name="Tortilla Campera"
+                        description=""
+                        price="6,50 €"
+                    />
+                </div>
+            </div>
+
+            <div class="subcategory menu-card" id="empanados">
+                <h3 class="subcategory-title">EMPANADOS</h3>
+
+                <div class="menu-grid">
+                    <MenuItem
+                        name="1/4 Croquetas caseras"
+                        description=""
+                        price="4,50 €"
+                    />
+                    <MenuItem
+                        name="1/4 Croquetas de jamón"
+                        description=""
+                        price="3,00 €"
+                    />
+                    <MenuItem
+                        name="1/4 Filetes de pollo"
+                        description=""
+                        price="4,50 €"
+                    />
+                    <MenuItem
+                        name="1/4 Lagrimitas"
+                        description=""
+                        price="4,50 €"
+                    />
+                    <MenuItem
+                        name="1/4 Langostinos bechamel"
+                        description=""
+                        price="4,50 €"
+                    />
+                    <MenuItem
+                        name="1/4 Pechuguitas bechamel"
+                        description=""
+                        price="4,50 €"
+                    />
+                    <MenuItem
+                        name="6 Huevos bechamel"
+                        description=""
+                        price="4,50 €"
+                    />
+                    <MenuItem
+                        name="Aneto"
+                        description="(Patatas dentro +1€)"
+                        price="4,50 €"
+                    />
+                </div>
+            </div>
+
+            <div class="subcategory menu-card" id="alinos">
+                <h3 class="subcategory-title">ALIÑOS</h3>
+
+                <div class="menu-grid">
+                    <MenuItem
+                        name="Huevas aliñadas"
+                        description=""
+                        price="5,00 €"
+                    />
+                    <MenuItem
+                        name="Salpicón de marisco"
+                        description=""
+                        price="5,00 €"
+                    />
+                    <MenuItem
+                        name="Patatas Alioli"
+                        description=""
+                        price="4,00 €"
+                    />
+                    <MenuItem
+                        name="Pimientos asados"
+                        description=""
+                        price="4,00 €"
+                    />
+                    <MenuItem
+                        name="Ensaladilla"
+                        description=""
+                        price="5,00 €"
+                    />
+                    <MenuItem
+                        name="Zanahorias aliñadas"
+                        description=""
+                        price="3,00 €"
+                    />
+                </div>
+            </div>
+
+            <div class="subcategory menu-card" id="bebidas">
+                <h3 class="subcategory-title">BEBIDAS</h3>
+
+                <div class="menu-grid">
+                    <MenuItem
+                        name="Lata de refresco 33cl"
+                        description=""
+                        price="1,20 €"
+                    />
+                    <MenuItem
+                        name="Lata de cerveza 33cl"
+                        description=""
+                        price="1,20 €"
+                    />
+                    <MenuItem
+                        name="Botella de refresco 2L"
+                        description=""
+                        price="2,50 €"
+                    />
+                    <MenuItem
+                        name="Botella de agua 1.5L"
+                        description=""
+                        price="1,20 €"
+                    />
+                    <MenuItem
+                        name="Botella de agua 0.5L"
+                        description=""
+                        price="0,50 €"
+                    />
+                    <MenuItem name="Cerveza 1L" description="" price="2,20 €" />
+                </div>
+            </div>
+
+            <div class="subcategory menu-card section-spacer" id="complementos">
+                <h3 class="subcategory-title">COMPLEMENTOS</h3>
+
+                <div class="menu-grid">
+                    <MenuItem name="Aceitunas" description="" price="1,20 €" />
+                    <MenuItem name="Pan" description="" price="0,70 €" />
+                    <MenuItem name="Picos" description="" price="1,20 €" />
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="menu-cards-container container">
-
-        <div class="subcategory menu-card" id="pollo">
-            <h3 class="subcategory-title">POLLO</h3>
-
-            <div class="menu-grid">
-                <MenuItem name="Pollo asado" description="" price="13,20 €" />
-                <MenuItem
-                    name="Pollo asado al limón"
-                    description="(Solo por encargo)"
-                    price="13,20 €"
-                />
-                <MenuItem
-                    name="1/2 Pollo asado"
-                    description=""
-                    price="8,00 €"
-                />
-                <MenuItem
-                    name="1/2 Pollo asado con patatas dentro"
-                    description=""
-                    price="9,00 €"
-                />
-            </div>
-        </div>
-
-        <div class="subcategory menu-card" id="patatas">
-            <h3 class="subcategory-title">PATATAS</h3>
-
-            <div class="menu-grid">
-                <MenuItem
-                    name="Tarrina de patatas grande"
-                    description=""
-                    price="4,00 €"
-                />
-                <MenuItem
-                    name="Tarrina de patatas mediana"
-                    description=""
-                    price="3,00 €"
-                />
-                <MenuItem
-                    name="Tarrina de patatas pequeña"
-                    description=""
-                    price="1,00 €"
-                />
-            </div>
-        </div>
-
-        <div class="subcategory menu-card" id="tortillas">
-            <h3 class="subcategory-title">TORTILLAS</h3>
-
-            <div class="menu-grid">
-                <MenuItem
-                    name="Tortilla Normal"
-                    description=""
-                    price="5,50 €"
-                />
-                <MenuItem
-                    name="Tortilla Pimiento y cebolla"
-                    description=""
-                    price="6,00 €"
-                />
-                <MenuItem
-                    name="Tortilla Chistorra"
-                    description=""
-                    price="6,00 €"
-                />
-                <MenuItem
-                    name="Tortilla Campera"
-                    description=""
-                    price="6,50 €"
-                />
-            </div>
-        </div>
-
-        <div class="subcategory menu-card" id="empanados">
-            <h3 class="subcategory-title">EMPANADOS</h3>
-
-            <div class="menu-grid">
-                <MenuItem
-                    name="1/4 Croquetas caseras"
-                    description=""
-                    price="4,50 €"
-                />
-                <MenuItem
-                    name="1/4 Croquetas de jamón"
-                    description=""
-                    price="3,00 €"
-                />
-                <MenuItem
-                    name="1/4 Filetes de pollo"
-                    description=""
-                    price="4,50 €"
-                />
-                <MenuItem name="1/4 Lagrimitas" description="" price="4,50 €" />
-                <MenuItem
-                    name="1/4 Langostinos bechamel"
-                    description=""
-                    price="4,50 €"
-                />
-                <MenuItem
-                    name="1/4 Pechuguitas bechamel"
-                    description=""
-                    price="4,50 €"
-                />
-                <MenuItem
-                    name="6 Huevos bechamel"
-                    description=""
-                    price="4,50 €"
-                />
-                <MenuItem
-                    name="Aneto"
-                    description="(Patatas dentro +1€)"
-                    price="4,50 €"
-                />
-            </div>
-        </div>
-
-        <div class="subcategory menu-card" id="alinos">
-            <h3 class="subcategory-title">ALIÑOS</h3>
-
-            <div class="menu-grid">
-                <MenuItem
-                    name="Huevas aliñadas"
-                    description=""
-                    price="5,00 €"
-                />
-                <MenuItem
-                    name="Salpicón de marisco"
-                    description=""
-                    price="5,00 €"
-                />
-                <MenuItem name="Patatas Alioli" description="" price="4,00 €" />
-                <MenuItem
-                    name="Pimientos asados"
-                    description=""
-                    price="4,00 €"
-                />
-                <MenuItem name="Ensaladilla" description="" price="5,00 €" />
-                <MenuItem
-                    name="Zanahorias aliñadas"
-                    description=""
-                    price="3,00 €"
-                />
-            </div>
-        </div>
-
-        <div class="subcategory menu-card" id="bebidas">
-            <h3 class="subcategory-title">BEBIDAS</h3>
-
-            <div class="menu-grid">
-                <MenuItem
-                    name="Lata de refresco 33cl"
-                    description=""
-                    price="1,20 €"
-                />
-                <MenuItem
-                    name="Lata de cerveza 33cl"
-                    description=""
-                    price="1,20 €"
-                />
-                <MenuItem
-                    name="Botella de refresco 2L"
-                    description=""
-                    price="2,50 €"
-                />
-                <MenuItem
-                    name="Botella de agua 1.5L"
-                    description=""
-                    price="1,20 €"
-                />
-                <MenuItem
-                    name="Botella de agua 0.5L"
-                    description=""
-                    price="0,50 €"
-                />
-                <MenuItem name="Cerveza 1L" description="" price="2,20 €" />
-            </div>
-        </div>
-
-        <div class="subcategory menu-card" id="complementos">
-            <h3 class="subcategory-title">COMPLEMENTOS</h3>
-
-            <div class="menu-grid">
-                <MenuItem name="Aceitunas" description="" price="1,20 €" />
-                <MenuItem name="Pan" description="" price="0,70 €" />
-                <MenuItem name="Picos" description="" price="1,20 €" />
-            </div>
-        </div>
-    </div>
-
 
     <div class="container menu-footer section-spacer">
         <div class="footer-wrap">
@@ -379,8 +403,6 @@ import CategoryNav from "../components/CategoryNav.astro";
         display: block !important;
     }
 
-
-
     /* Support for section anchor jumping */
     :global(section.section-spacer) {
         scroll-margin-top: 8rem;
@@ -407,7 +429,6 @@ import CategoryNav from "../components/CategoryNav.astro";
         height: 2px;
         background: var(--primary);
     }
-
 
     .menu-grid {
         display: grid;

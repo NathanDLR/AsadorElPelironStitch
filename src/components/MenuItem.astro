@@ -30,26 +30,37 @@ const isArray = Array.isArray(description);
 
 <style>
     .menu-item {
-        margin-bottom: 2rem;
+        margin-bottom: 0; /* Handled by grid gap */
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 1.5rem 1rem;
-        transition: transform 0.3s ease;
+        padding: 2rem 1.5rem;
+        transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+        border: 1px solid transparent;
+        border-radius: 8px;
     }
+
+    .menu-item:hover {
+        transform: translateY(-6px);
+        background: white;
+        box-shadow: 0 10px 30px rgba(45, 58, 48, 0.05);
+        border-color: rgba(155, 63, 37, 0.1);
+    }
+
 
     .menu-item.featured {
         background: var(--surface-container-low);
-        border: 1px solid rgba(137, 114, 108, 0.15);
+        border: 1px solid rgba(155, 63, 37, 0.1);
         padding: 2rem 1.5rem;
     }
 
     .menu-item.featured:hover {
-        transform: translateY(-4px);
-        background: var(--surface-container);
+        background: white;
+        border-color: var(--primary);
     }
+
 
 
 
@@ -63,15 +74,19 @@ const isArray = Array.isArray(description);
 
     .item-name {
         font: var(--title-md);
-        color: var(--on-surface);
+        color: var(--secondary); /* Forest Green names */
         text-transform: uppercase;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.1em;
+        font-weight: 600;
     }
 
     .item-price {
-        font: var(--title-sm);
+        font: var(--title-md); /* Slightly larger price */
         color: var(--primary);
+        font-weight: 700;
+        letter-spacing: 0.02em;
     }
+
 
     .item-description,
     .item-description-list {
