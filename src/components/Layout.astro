@@ -37,7 +37,7 @@ const { title, description = "Asador El Pelirón" } = Astro.props;
             <slot />
         </main>
 
-        <footer class="section-spacer">
+        <footer class="site-footer">
             <div class="container footer-content">
                 <div class="footer-brand">
                     <span class="terracotta-thread"></span>
@@ -49,6 +49,7 @@ const { title, description = "Asador El Pelirón" } = Astro.props;
                 </p>
             </div>
         </footer>
+
 
         <style>
             .editorial-nav {
@@ -88,11 +89,17 @@ const { title, description = "Asador El Pelirón" } = Astro.props;
                 color: var(--primary);
             }
 
+            .site-footer {
+                background-color: var(--secondary);
+                color: var(--on-secondary);
+                padding: 5rem 0;
+            }
+
             .footer-content {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 2rem;
+                gap: 2.5rem;
                 text-align: center;
             }
 
@@ -102,6 +109,11 @@ const { title, description = "Asador El Pelirón" } = Astro.props;
                 align-items: center;
                 gap: 1rem;
             }
+
+            .site-footer .terracotta-thread {
+                background-color: var(--primary-container);
+            }
+
 
             .footer-links {
                 display: flex;
@@ -118,9 +130,11 @@ const { title, description = "Asador El Pelirón" } = Astro.props;
 
             .copyright {
                 font-size: 0.65rem;
-                opacity: 0.4;
-                letter-spacing: 0.05em;
+                opacity: 0.5;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
             }
+
         </style>
     </body>
 </html>

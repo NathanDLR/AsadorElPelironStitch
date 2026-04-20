@@ -19,9 +19,16 @@
   --tertiary: #72554b;
   --tertiary-container: #8d6e63;
   --on-tertiary: #ffffff;
+
+  --secondary: #2d3a30;
+  --secondary-container: #425246;
+  --on-secondary: #fcf9f4;
+  
+  --surface-alt: #f1f3ef;
   
   --outline: #89726c;
   --outline-variant: #ddc0b9;
+
   
   /* Typography Scale */
   --font-serif: 'Noto Serif', serif;
@@ -108,9 +115,47 @@ button, input, textarea, .card {
   padding: 6rem 0;
 }
 
+.menu-card {
+  display: none;
+  width: 100%;
+}
+
+.menu-card.active {
+  display: block;
+  animation: menuEntry 0.6s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+}
+
+@keyframes menuEntry {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.section-alt {
+  background-color: var(--surface-alt);
+}
+
+.section-dark {
+  background-color: var(--secondary);
+  color: var(--on-secondary);
+}
+
+.section-dark .subcategory-title,
+.section-dark .display-lg,
+.section-dark .headline-lg {
+  color: var(--on-secondary);
+}
+
 @media (max-width: 768px) {
   .section-spacer {
     padding: 4rem 0;
   }
 }
+
 

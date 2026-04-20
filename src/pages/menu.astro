@@ -19,118 +19,121 @@ import CategoryNav from "../components/CategoryNav.astro";
 
     <CategoryNav />
 
-    <MenuSection title="Menús" id="ofertas">
-        <div class="menu-grid">
-            <MenuItem
-                name="Ofertas Nº1 A"
-                description={["Pollo Asado", "Tarrina de patatas grande"]}
-                price="17,00 €"
-                variant="featured"
-            />
+    <div id="ofertas" class="menu-card active section-alt section-spacer">
+        <MenuSection title="Menús">
 
-            <MenuItem
-                name="Ofertas Nº1 B"
-                description={[
-                    "Pollo Asado",
-                    "Tarrina de patatas mediana",
-                    "1/4 Croquetas de jamón",
-                ]}
-                price="18,00 €"
-                variant="featured"
-            />
+            <div class="menu-grid">
+                <MenuItem
+                    name="Ofertas Nº1 A"
+                    description={["Pollo Asado", "Tarrina de patatas grande"]}
+                    price="17,00 €"
+                    variant="featured"
+                />
 
-            <MenuItem
-                name="Oferta Nº2"
-                description={[
-                    "Pollo Asado",
-                    "Elegir: Tortilla, Aliño ó 1/4 Empanados",
-                    "Elegir: 1/4 Croquetas ó Patatas medianas",
-                    "Elegir: Aceitunas, pan ó picos",
-                ]}
-                price="19,50 €"
-                variant="featured"
-            />
+                <MenuItem
+                    name="Ofertas Nº1 B"
+                    description={[
+                        "Pollo Asado",
+                        "Tarrina de patatas mediana",
+                        "1/4 Croquetas de jamón",
+                    ]}
+                    price="18,00 €"
+                    variant="featured"
+                />
 
-            <MenuItem
-                name="Oferta Nº3 - Menú Familiar"
-                description={[
-                    "Pollo Asado",
-                    "Tarrina de patatas grande",
-                    "Elegir: 1/4 Empanados, Aliño ó Tortilla",
-                    "1/4 Croquetas de jamón",
-                    "Refresco 2L o Cerveza 1L",
-                ]}
-                price="23,50 €"
-                variant="featured"
-            />
+                <MenuItem
+                    name="Oferta Nº2"
+                    description={[
+                        "Pollo Asado",
+                        "Elegir: Tortilla, Aliño ó 1/4 Empanados",
+                        "Elegir: 1/4 Croquetas ó Patatas medianas",
+                        "Elegir: Aceitunas, pan ó picos",
+                    ]}
+                    price="19,50 €"
+                    variant="featured"
+                />
 
-            <MenuItem
-                name="Oferta 2 Pollos"
-                description={["2 Pollos Asados"]}
-                price="24,50 €"
-                variant="featured"
-            />
+                <MenuItem
+                    name="Oferta Nº3 - Menú Familiar"
+                    description={[
+                        "Pollo Asado",
+                        "Tarrina de patatas grande",
+                        "Elegir: 1/4 Empanados, Aliño ó Tortilla",
+                        "1/4 Croquetas de jamón",
+                        "Refresco 2L o Cerveza 1L",
+                    ]}
+                    price="23,50 €"
+                    variant="featured"
+                />
 
-            <MenuItem
-                name="Oferta Medio Pollo"
-                description={[
-                    "1/2 Pollo Asado con patatas",
-                    "Lata de refresco 33cl",
-                    "Elegir: Aceitunas, Pan ó Picos",
-                ]}
-                price="10,50 €"
-                variant="featured"
-            />
+                <MenuItem
+                    name="Oferta 2 Pollos"
+                    description={["2 Pollos Asados"]}
+                    price="24,50 €"
+                    variant="featured"
+                />
 
-            <MenuItem
-                name="Oferta Sin Pollo"
-                description={[
-                    "Tortilla",
-                    "Aliño",
-                    "1/4 Empanados",
-                    "Elegir: Aceitunas, Pan ó Picos",
-                ]}
-                price="14,00 €"
-                variant="featured"
-            />
+                <MenuItem
+                    name="Oferta Medio Pollo"
+                    description={[
+                        "1/2 Pollo Asado con patatas",
+                        "Lata de refresco 33cl",
+                        "Elegir: Aceitunas, Pan ó Picos",
+                    ]}
+                    price="10,50 €"
+                    variant="featured"
+                />
 
-            <MenuItem
-                name="Super Oferta"
-                description={[
-                    "2 Pollos Asados",
-                    "Tarrina de patatas grande",
-                    "1/4 Empanados",
-                    "Aliño",
-                    "Tortilla",
-                    "Refresco 2L ó Cerveza 1L",
-                ]}
-                price="39,50 €"
-                variant="featured"
-            />
+                <MenuItem
+                    name="Oferta Sin Pollo"
+                    description={[
+                        "Tortilla",
+                        "Aliño",
+                        "1/4 Empanados",
+                        "Elegir: Aceitunas, Pan ó Picos",
+                    ]}
+                    price="14,00 €"
+                    variant="featured"
+                />
 
-            <MenuItem
-                name="Oferta Anetos"
-                description={["4 Anetos", "Tarrina de patatas grande"]}
-                price="17,00 €"
-                variant="featured"
-            />
+                <MenuItem
+                    name="Super Oferta"
+                    description={[
+                        "2 Pollos Asados",
+                        "Tarrina de patatas grande",
+                        "1/4 Empanados",
+                        "Aliño",
+                        "Tortilla",
+                        "Refresco 2L ó Cerveza 1L",
+                    ]}
+                    price="39,50 €"
+                    variant="featured"
+                />
 
-            <MenuItem
-                name="Oferta Campera"
-                description={[
-                    "Pollo Asado",
-                    "1/4 Empanados",
-                    "1 Tortilla",
-                    "Refresco 2L ó Cerveza 1L",
-                ]}
-                price="21,50 €"
-                variant="featured"
-            />
-        </div>
-    </MenuSection>
+                <MenuItem
+                    name="Oferta Anetos"
+                    description={["4 Anetos", "Tarrina de patatas grande"]}
+                    price="17,00 €"
+                    variant="featured"
+                />
 
-    <MenuSection title="Artículos" id="articulos">
-        <div class="subcategory" id="pollo">
+                <MenuItem
+                    name="Oferta Campera"
+                    description={[
+                        "Pollo Asado",
+                        "1/4 Empanados",
+                        "1 Tortilla",
+                        "Refresco 2L ó Cerveza 1L",
+                    ]}
+                    price="21,50 €"
+                    variant="featured"
+                />
+        </MenuSection>
+    </div>
+
+    <div class="menu-cards-container container">
+
+        <div class="subcategory menu-card" id="pollo">
             <h3 class="subcategory-title">POLLO</h3>
 
             <div class="menu-grid">
@@ -153,7 +156,7 @@ import CategoryNav from "../components/CategoryNav.astro";
             </div>
         </div>
 
-        <div class="subcategory" id="patatas">
+        <div class="subcategory menu-card" id="patatas">
             <h3 class="subcategory-title">PATATAS</h3>
 
             <div class="menu-grid">
@@ -175,7 +178,7 @@ import CategoryNav from "../components/CategoryNav.astro";
             </div>
         </div>
 
-        <div class="subcategory" id="tortillas">
+        <div class="subcategory menu-card" id="tortillas">
             <h3 class="subcategory-title">TORTILLAS</h3>
 
             <div class="menu-grid">
@@ -202,7 +205,7 @@ import CategoryNav from "../components/CategoryNav.astro";
             </div>
         </div>
 
-        <div class="subcategory" id="empanados">
+        <div class="subcategory menu-card" id="empanados">
             <h3 class="subcategory-title">EMPANADOS</h3>
 
             <div class="menu-grid">
@@ -245,7 +248,7 @@ import CategoryNav from "../components/CategoryNav.astro";
             </div>
         </div>
 
-        <div class="subcategory" id="alinos">
+        <div class="subcategory menu-card" id="alinos">
             <h3 class="subcategory-title">ALIÑOS</h3>
 
             <div class="menu-grid">
@@ -274,7 +277,7 @@ import CategoryNav from "../components/CategoryNav.astro";
             </div>
         </div>
 
-        <div class="subcategory" id="bebidas">
+        <div class="subcategory menu-card" id="bebidas">
             <h3 class="subcategory-title">BEBIDAS</h3>
 
             <div class="menu-grid">
@@ -307,7 +310,7 @@ import CategoryNav from "../components/CategoryNav.astro";
             </div>
         </div>
 
-        <div class="subcategory" id="complementos">
+        <div class="subcategory menu-card" id="complementos">
             <h3 class="subcategory-title">COMPLEMENTOS</h3>
 
             <div class="menu-grid">
@@ -316,7 +319,8 @@ import CategoryNav from "../components/CategoryNav.astro";
                 <MenuItem name="Picos" description="" price="1,20 €" />
             </div>
         </div>
-    </MenuSection>
+    </div>
+
 
     <div class="container menu-footer section-spacer">
         <div class="footer-wrap">
@@ -352,12 +356,30 @@ import CategoryNav from "../components/CategoryNav.astro";
     }
 
     .subcategory {
-        margin-bottom: 4rem;
-        display: flex;
+        padding: 4rem 0;
+        display: none; /* Hide by default */
         flex-direction: column;
         align-items: center;
-        scroll-margin-top: 8rem;
     }
+
+    .subcategory.active {
+        display: flex; /* Show only when active */
+    }
+
+    /* Target the global menu-card class for scoped elements like ofertas */
+    :global(.menu-card) {
+        display: none !important;
+    }
+
+    :global(.menu-card.active) {
+        display: block !important;
+    }
+
+    #ofertas.active {
+        display: block !important;
+    }
+
+
 
     /* Support for section anchor jumping */
     :global(section.section-spacer) {
@@ -366,7 +388,7 @@ import CategoryNav from "../components/CategoryNav.astro";
 
     .subcategory-title {
         font: var(--title-lg);
-        color: var(--primary);
+        color: var(--secondary);
         text-transform: uppercase;
         letter-spacing: 0.15em;
         margin-bottom: 2.5rem;
@@ -382,10 +404,10 @@ import CategoryNav from "../components/CategoryNav.astro";
         left: 50%;
         transform: translateX(-50%);
         width: 30px;
-        height: 1px;
+        height: 2px;
         background: var(--primary);
-        opacity: 0.4;
     }
+
 
     .menu-grid {
         display: grid;

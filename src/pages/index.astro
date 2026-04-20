@@ -17,25 +17,28 @@ import MenuSection from "../components/MenuSection.astro";
 		<Button href="/menu">Ver Carta</Button>
 	</Hero>
 
-	<MenuSection title="¿Dónde estamos?" id="donde-estamos">
-		<div class="editorial-copy">
-			<p class="intro-p">
-				Puedes encontrarnos en la Avenida Ronda del Pelirón 49, o haz
-				clic en el mapa para obtener indicaciones.
-			</p>
-			<div class="map-wrapper">
-				<iframe
-					src="https://www.google.com/maps?q=Av.+Ronda+del+Pelirón,+49,+Jerez+de+la+Frontera&output=embed"
-					width="100%"
-					height="450"
-					style="border:0;"
-					allowfullscreen=""
-					loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade"
-					title="Ubicación Asador El Pelirón"></iframe>
+	<div class="section-alt section-spacer">
+		<MenuSection title="¿Dónde estamos?" id="donde-estamos">
+			<div class="editorial-copy">
+				<p class="intro-p">
+					Puedes encontrarnos en la Avenida Ronda del Pelirón 49, o haz
+					clic en el mapa para obtener indicaciones.
+				</p>
+				<div class="map-wrapper">
+					<iframe
+						src="https://www.google.com/maps?q=Av.+Ronda+del+Pelirón,+49,+Jerez+de+la+Frontera&output=embed"
+						width="100%"
+						height="450"
+						style="border:0;"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+						title="Ubicación Asador El Pelirón"></iframe>
+				</div>
 			</div>
-		</div>
-	</MenuSection>
+		</MenuSection>
+	</div>
+
 </Layout>
 
 <style>

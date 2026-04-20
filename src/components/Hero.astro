@@ -18,7 +18,7 @@ const {
 } = Astro.props;
 ---
 
-<section class="hero-section">
+<section class="hero-section section-alt">
     <div class="container asymmetric-grid">
         <div class="hero-text">
             <h1 class="display-lg">{title}</h1>
@@ -31,13 +31,17 @@ const {
             <slot />
         </div>
     </div>
+
 </section>
+
 
 <style>
     .hero-section {
-        padding: 6rem 0 8rem;
+        padding: 5rem 0 8rem;
         overflow: hidden;
+        border-bottom: 1px solid var(--outline-variant);
     }
+
 
     .asymmetric-grid {
         display: flex;
@@ -52,7 +56,9 @@ const {
         margin-bottom: 2rem;
         text-transform: uppercase;
         max-width: 900px;
+        color: var(--secondary); /* Forest Green for main heading */
     }
+
 
     .hero-text {
         width: 100%;
